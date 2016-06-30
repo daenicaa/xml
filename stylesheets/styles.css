@@ -1,0 +1,51 @@
+body{
+	font-family: Open Sans;
+}
+.get-details_form{
+	text-align: center;
+	margin: 0 auto;
+	width: 300px;
+	background-color: #E1E1E1;
+	padding: 10px;
+	color: #333;
+	border-radius: 5px;
+}
+
+.get-details_form input[type="text"]{
+	width: 90%;
+	margin: 10px;
+	height: 30px;
+	padding: 5px;
+}
+
+.get-details_form .label{
+	font-size: 30px;
+	width: 100%;
+}
+
+.green-button{
+	background: #8bc34a;
+	color: #FFF;
+	font-size: 15px;
+	padding: 5px 10px;
+	border: none;
+	border-radius: 2px;
+}
+
+.channel-title{
+	text-align: center;
+	background-color: #E1E1E1;
+	padding: 10px;
+}
+
+.channel-titlea{
+	text-decoration: none;
+	color: #333;
+	font-size: 20px;
+}
+
+.display{
+	text-align: center;
+	margin: 20px 0 0;
+	font-size: 20px;
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="stylesheets/styles.css">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open Sans">
+	<script>
+		function showRSS(str) {
+		  if (str.length==0) { 
+		    document.getElementById("rssOutput").innerHTML="";
+		    return;
+		  }
+		  if (window.XMLHttpRequest) {
+		    // code for IE7+, Firefox, Chrome, Opera, Safari
+		    xmlhttp=new XMLHttpRequest();
+		  } else {  // code for IE6, IE5
+		    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+		  }
+		  xmlhttp.onreadystatechange=function() {
+		    if (xmlhttp.readyState==4 && xmlhttp.status==200) {
+		      document.getElementById("rssOutput").innerHTML=xmlhttp.responseText;
+		    }
+		  }
+		  xmlhttp.open("GET","getrss.php?q="+str,true);
+		  xmlhttp.send();
+		}
+
+	</script>
+	</head>
+<body>
+
+<form>
+<select onchange="showRSS(this.value)" class="green-button">
+	<option value="">Select Feed:</option>
+	<option value="Google">Google News</option>
+	<option value="NBC">NBC News</option>
+	<option value="Yahoo">Yahoo News</option>
+	<option value="Zen">Zen News</option>
+</select>
+</form>
+<br>
+<div id="rssOutput">Choose feed to display here</div>
+</body>
+</html>
+</body>
+</html>
